@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMCApp", "FMCApp\FMCApp.csproj", "{DD81733F-04A4-408F-81C3-5AE70DFF37AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMCApp.Entity", "FMCApp.Entity\FMCApp.Entity.csproj", "{16FFB070-B63A-4621-A20B-8673826C685F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMCApp.Core", "FMCApp.Core\FMCApp.Core.csproj", "{CF4DCB0E-7622-4450-A406-2F174A9B49AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD81733F-04A4-408F-81C3-5AE70DFF37AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD81733F-04A4-408F-81C3-5AE70DFF37AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD81733F-04A4-408F-81C3-5AE70DFF37AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD81733F-04A4-408F-81C3-5AE70DFF37AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FFB070-B63A-4621-A20B-8673826C685F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FFB070-B63A-4621-A20B-8673826C685F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FFB070-B63A-4621-A20B-8673826C685F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FFB070-B63A-4621-A20B-8673826C685F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4DCB0E-7622-4450-A406-2F174A9B49AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4DCB0E-7622-4450-A406-2F174A9B49AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4DCB0E-7622-4450-A406-2F174A9B49AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4DCB0E-7622-4450-A406-2F174A9B49AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FD0B980-265E-430D-99B5-85ED46C02CF1}
+	EndGlobalSection
+EndGlobal

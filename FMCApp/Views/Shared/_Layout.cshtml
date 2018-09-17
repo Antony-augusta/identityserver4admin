@@ -1,0 +1,68 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FMCApp.Entity.Entities.Identity
+@using FMCApp.Models
+
+@inject IViewLocalizer Localizer
+
+@inject SignInManager<UserIdentity> SignInManager
+@inject UserManager<UserIdentity> UserManager
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FMCApp</title>
+
+    <environment include="Development">
+        <link href="~/dist/css/bundle.min.css" asp-append-version="true" rel="stylesheet" />
+        <link href="~/dist/css/web.css" asp-append-version="true" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link href="~/dist/css/bundle.min.css" asp-append-version="true" rel="stylesheet" />
+        <link href="~/dist/css/web.min.css" asp-append-version="true" rel="stylesheet" />
+    </environment>
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="menu d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <!--Site name -->
+        <h3 class="menu-logo my-0 mr-md-auto font-weight-normal"><a class="logo" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["PageTitle"]</a></h3>
+
+        <!--Menu item -->
+        @if (User.Identity.IsAuthenticated)
+        {
+            <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="submit" class="btn btn-primary navbar-btn navbar-link">Log out</button>
+                    </li>
+                </ul>
+            </form>
+        }
+
+        <!--Menu button - show in < MD -->
+        <a class="my-2 btn btn-outline-primary menu-button" href="#">
+            <span class="oi oi-menu" title="menu" aria-hidden="true"></span> @Localizer["MenuButton"]
+        </a>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - FMCApp</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/dist/js/bundle.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/dist/js/bundle.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
